@@ -4,6 +4,7 @@ import {} from '../meme/memeSlice';
 
 export function Meme(){
     const dispatch = useDispatch();
+    const {subreddit, setSubreddit} = useState();
 
     return(
         <div>
