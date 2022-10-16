@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {} from '../nav/navSlice';
+import {
+    store,
+    changeSubreddit
+} from '../../app/store';
 
 export function Nav(){
     const dispatch = useDispatch();
@@ -10,7 +14,7 @@ export function Nav(){
         console.log("Change detected: " + change);
     }
     const onClick = (value) => {
-        console.log("You clicked on " + value);
+        dispatch({type: 'changeSubreddit', payload: value});
     }
 
     return(
@@ -21,7 +25,7 @@ export function Nav(){
                     <li onClick={() => onClick('memes')}>r/memes</li>
                     <li onClick={() => onClick('rareinsults')}>r/rareinsults</li>
                     <li onClick={() => onClick('CasualUK')}>r/CasualUK</li>
-                    <input type="text" placeholder='Search...' onChange={onChange} />
+                    <input type="text" placeholder='Search...' onChange={(e) => {onClick(e.target.value)}} />
                 </ul>
             </nav>
         </header>

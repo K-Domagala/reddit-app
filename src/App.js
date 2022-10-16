@@ -11,9 +11,10 @@ function App() {
     <div className="App">
       <Nav />
       <Meme />
+      
       <div className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
+        {/* <Counter /> */}
       </div>
     </div>
   );
