@@ -10,7 +10,7 @@ export function Meme(){
             <br />
             <h1>{memeTitle}</h1>
             <br />
-            <img src={memeImg} className='memeImg' />
+            <img src={memeImg} className='memeImg' alt='Meme Image' />
         </div>
     )
 }

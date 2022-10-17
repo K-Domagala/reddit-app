@@ -6,7 +6,7 @@ export const fetchMeme = async (subreddit) => {
         const allowed = body.data.children.filter(post => !post.data.over_18);
         const memes = allowed.filter(post => {
             let ext = post.data.url.slice(-4);
-            return (ext=='.jpg'||ext=='.png');
+            return (ext==='.jpg'||ext==='.png');
         });
         const randomnumber = Math.floor(Math.random() * memes.length);
         let title = memes[randomnumber].data.title;
