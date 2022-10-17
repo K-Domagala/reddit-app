@@ -9,7 +9,7 @@ const changeSubredditReducer = (state = '/', action) => {
   }
 }
 
-const updateMemeTitle = (state = '', action) => {
+const updateMemeTitle = (state = 'Welcome to the Random Reddit Meme app. Click on the links above, or search ur own meme to get started.', action) => {
   switch(action.type){
     case 'updateMemeTitle':
       return action.payload;
@@ -18,7 +18,7 @@ const updateMemeTitle = (state = '', action) => {
   }
 }
 
-const updateMemeImg = (state = '', action) => {
+const updateMemeImg = (state = 'https://en.meming.world/images/en/d/d0/Crying_Cat.jpg', action) => {
   switch(action.type){
     case 'updateMemeImg':
       return action.payload;
