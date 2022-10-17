@@ -4,11 +4,16 @@ import {} from '../meme/memeSlice';
 
 export function Meme(){
     const subreddit = useSelector(state => state.subreddit);
+    const memeImg = useSelector(state => state.memeImg);
+    const memeTitle = useSelector(state => state.memeTitle);
     const dispatch = useDispatch();
 
     return(
         <div>
-            <h1>Hello app {subreddit}</h1>
+            <br />
+            <h1>{memeTitle}</h1>
+            <br />
+            <img src={memeImg} className='memeImg' />
         </div>
     )
 }

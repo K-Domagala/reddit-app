@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import {} from '../nav/navSlice';
-import {
-    store,
-    changeSubreddit
-} from '../../app/store';
+import {fetchMeme} from '../../api/util';
 
 export function Nav(){
     const dispatch = useDispatch();
@@ -13,8 +9,14 @@ export function Nav(){
         change++;
         console.log("Change detected: " + change);
     }
-    const onClick = (value) => {
+    const onClick = async (value) => {
+        const newMeme = await fetchMeme(value);
+        console.log(newMeme);
+        dispatch({type: 'updateMemeTitle', payload: newMeme.title});
+        dispatch({type: 'updateMemeImg', payload: newMeme.img});
+        //console.log(newMeme);
         dispatch({type: 'changeSubreddit', payload: value});
+        //dispatch({type: 'updateMeme', payload: newMeme});
     }
 
     return(
