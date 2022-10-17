@@ -1,5 +1,4 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { updateMemeUtil, fetchMeme } from '../api/util';
 
 const changeSubredditReducer = (state = '/', action) => {
   switch(action.type){
