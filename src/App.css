@@ -52,6 +52,10 @@ nav li, input{
   margin: 5px 15px 5px 0;
 }
 
+nav li{
+  cursor: pointer;
+}
+
 .memeImg{
   display:flex;
   width: 800px;
@@ -79,7 +83,20 @@ nav li, input{
   height: auto;
 }
 
-
+.button {
+  appearance: none;
+  background: none;
+  font-size: inherit;
+  padding-left: 12px;
+  padding-right: 12px;
+  border: 2px solid;
+  color: white;
+  padding-bottom: 4px;
+  padding-top:4px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.15s;
+}
 
 details img, article{
   margin: 10px;

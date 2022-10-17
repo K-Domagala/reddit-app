@@ -1,7 +1,8 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 export function Meme(){
+    const dispatch = useDispatch();
     const memeImg = useSelector(state => state.memeImg);
     const memeTitle = useSelector(state => state.memeTitle);
 
