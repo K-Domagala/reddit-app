@@ -39,8 +39,6 @@ export const fetchMeme = async (subreddit) => {
         const randomnumber = Math.floor(Math.random() * memes.length);
         let title = memes[randomnumber].data.title;
         let img = memes[randomnumber].data.url;
-        // console.log(title);
-        // console.log(img);
         return {title, img};
     } catch (err) {
         console.log(err);

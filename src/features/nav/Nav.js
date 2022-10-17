@@ -1,14 +1,9 @@
-import React, { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React from 'react';
+import {  useDispatch } from 'react-redux';
 import {fetchMeme} from '../../api/util';
 
 export function Nav(){
     const dispatch = useDispatch();
-    let change = 0
-    const onChange = () => {
-        change++;
-        console.log("Change detected: " + change);
-    }
     const onClick = async (value) => {
         const newMeme = await fetchMeme(value);
         console.log(newMeme);
